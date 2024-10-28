@@ -1,4 +1,3 @@
-// Chat.js
 import React, { useState } from 'react';
 import './Chat.css';
 
@@ -8,8 +7,15 @@ const Chat = () => {
 
   const sendMessage = () => {
     if (input.trim()) {
-      setMessages([...messages, { id: Date.now().toString(), text: input }]);
+      const userMessage = { id: Date.now().toString(), text: input, sender: 'user' };
+      setMessages([...messages, userMessage]);
       setInput('');
+
+      // Mock bot response after 1 second
+      setTimeout(() => {
+        const botMessage = { id: Date.now().toString(), text: "This is a mock response.", sender: 'bot' };
+        setMessages((prevMessages) => [...prevMessages, botMessage]);
+      }, 1000);
     }
   };
 
@@ -17,7 +23,9 @@ const Chat = () => {
     <div className="chat-container">
       <div className="messages">
         {messages.map((msg) => (
-          <div key={msg.id} className="message">{msg.text}</div>
+          <div key={msg.id} className={`message ${msg.sender}`}>
+            {msg.text}
+          </div>
         ))}
       </div>
       <div className="input-container">
