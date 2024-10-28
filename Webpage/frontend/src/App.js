@@ -1,10 +1,19 @@
 import React from 'react';
-import Chat from './Components/Chat';
+import ChatHeader from './Components/ChatHeader';
+import ChatSidebar from './Components/ChatSidebar';
+import ChatWindow from './Components/ChatWindow';
+import './App.css';
 
-const App = () => (
-  <div className="App">
-    <Chat />
-  </div>
-);
+function App() {
+  return (
+    <div className="app-container">
+      <ChatHeader />
+      <div className="app-body">
+        <ChatSidebar />
+        <ChatWindow />
+      </div>
+    </div>
+  );
+}
 
 export default App;

@@ -1,0 +1,30 @@
+.message-bubble {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+  
+  .message-bubble.bot {
+    background-color: #e1e1e1;
+    color: #333;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+  }
+  
+  .message-bubble.user {
+    background-color: #007aff;
+    color: #fff;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+  }
+  
+  .message-bubble .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
