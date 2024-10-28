@@ -10,6 +10,15 @@
     font-family: Arial, sans-serif;
   }
   
+  .chat-header {
+    background-color: #007AFF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
   .messages {
     flex: 1;
     padding: 20px;

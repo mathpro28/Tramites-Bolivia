@@ -21,6 +21,7 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
+      <header className="chat-header">ChatBot Interface</header>
       <div className="messages">
         {messages.map((msg) => (
           <div key={msg.id} className={`message ${msg.sender}`}>
