@@ -2,27 +2,27 @@ import React from 'react';
 import './ChatSidebar.css';
 
 const tools = [
-  { name: 'Paragraph Writer' },
-  { name: 'Essay Writer' },
-  { name: 'Text Summarizer' },
-  { name: 'AI Text Rewriter' },
+  { name: 'Licencia de Conducir' },
+  { name: 'Certificado Legalizado' },
+  { name: 'Titulo Bachiller' },
+  { name: 'Certificado Solteria' },
 ];
 
 const characters = [
-  { name: 'Luna' },
-  { name: 'Sofia' },
-  { name: 'Ethan' },
+  { name: 'SEDUCA' },
+  { name: 'SEGIP' },
+  { name: 'SEREPI' },
 ];
 
 const ChatSidebar = () => (
   <div className="chat-sidebar">
-    <h3>Tools</h3>
+    <h3>Tramites</h3>
     <ul>
       {tools.map((tool, index) => (
         <li key={index}>{tool.name}</li>
       ))}
     </ul>
-    <h3>Characters</h3>
+    <h3>Instituciones</h3>
     <ul>
       {characters.map((character, index) => (
         <li key={index}>{character.name}</li>

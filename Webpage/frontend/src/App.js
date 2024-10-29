@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatHeader from './Components/ChatHeader';
-import ChatSidebar from './Components/ChatSidebar';
-import ChatWindow from './Components/ChatWindow';
+import ChatHeader from './components/ChatHeader';
+import ChatSidebar from './components/ChatSidebar';
+import ChatWindow from './components/ChatWindow';
 import './App.css';
 
 function App() {
