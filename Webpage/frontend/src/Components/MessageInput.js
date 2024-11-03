@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import './MessageInput.css';
 
 const MessageInput = ({ onSend }) => {
-  const [input, setInput] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSend = () => {
-    if (input.trim()) {
-      onSend(input);
-      setInput('');
+    if (message.trim()) {
+      onSend(message);
+      setMessage(''); // Clear the input after sending
     }
   };
 
   return (
-    <div className="message-input">
+    <div className="message-input-container">
       <input
         type="text"
-        placeholder="Enter Message"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        className="message-input"
+        placeholder="Type a message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)} // Update state on input change
+        onKeyDown={(e) => e.key === 'Enter' && handleSend()}
       />
-      <button onClick={handleSend}>
-        <img src="/send-icon.png" alt="send" />
-      </button>
+      <button onClick={handleSend} className="send-button">Send</button>
     </div>
   );
 };
