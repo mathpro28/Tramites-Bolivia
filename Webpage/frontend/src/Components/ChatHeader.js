@@ -3,8 +3,8 @@ import './ChatHeader.css';
 
 const ChatHeader = () => (
   <div className="chat-header">
-    <h1>Chat AI Tramites Bolivia</h1>
-    <p>Hacer tramites en Bolivia no tiene que ser tan feo</p>
+    <h1>TramiBot AI Bolivia</h1>
+    <p>Hacer <strong>tramites</strong> en Bolivia no tiene que ser tan <strong>feo</strong></p>
   </div>
 );
 
