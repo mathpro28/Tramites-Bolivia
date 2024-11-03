@@ -7,8 +7,7 @@ const MessageWindow = ({ messages }) => (
     <h1 className="chat-title">¿Qué trámite haremos hoy?</h1>
     <div className="message-container">
       {messages.map((msg, index) => (
-        // Check if the message text is not empty before rendering MessageBubble
-        msg.text.trim() && (
+        msg.text.trim() && msg.sender && (
           <MessageBubble key={index} text={msg.text} sender={msg.sender} />
         )
       ))}
