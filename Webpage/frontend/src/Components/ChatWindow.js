@@ -1,23 +1,37 @@
 import React, { useState } from 'react';
-import MessageBubble from './MessageBubble';
-import MessageInput from './MessageInput';
+import MessageWindow from './MessageWindow';
 import './ChatWindow.css';
 
 const ChatWindow = () => {
-  const [messages, setMessages] = useState([{ text: "Hello! How can I help you today?", sender: "bot" }]);
+  // Example state to hold chat messages
+  const [messages, setMessages] = useState([
+    { text: 'Hello! How can I help you today?', sender: 'bot' },
+    { text: 'I want to learn more about your services.', sender: 'user' }
+  ]);
 
-  const addMessage = (text) => {
-    setMessages([...messages, { text, sender: "user" }]);
+  // Function to add a new message
+  const sendMessage = (text) => {
+    setMessages([...messages, { text, sender: 'user' }]);
   };
 
   return (
     <div className="chat-window">
-      <div className="message-list">
-        {messages.map((msg, index) => (
-          <MessageBubble key={index} text={msg.text} sender={msg.sender} />
-        ))}
+      <MessageWindow messages={messages} />
+      <div className="message-input">
+        <input
+          type="text"
+          placeholder="Type a message..."
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              sendMessage(e.target.value);
+              e.target.value = ''; // Clear input field
+            }
+          }}
+        />
+        <button onClick={() => sendMessage(document.querySelector('.message-input input').value)}>
+          Send
+        </button>
       </div>
-      <MessageInput onSend={addMessage} />
     </div>
   );
 };
