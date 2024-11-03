@@ -1,22 +1,36 @@
 .chat-sidebar {
-    width: 250px;
-    background-color: #01071d;
-    padding: 20px;
-    color: #333;
-  }
-  
-  .chat-sidebar h3 {
-    margin-top: 20px;
-  }
-  
-  .chat-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .chat-sidebar li {
-    margin: 10px 0;
-    cursor: pointer;
-    color: #007aff;
-  }
-  
+  width: 250px;
+  padding: 20px;
+  background-color: #1c1f36;
+  color: #d1d1d1;
+  font-family: Arial, sans-serif;
+}
+
+.chat-sidebar h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.chat-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.chat-sidebar ul li {
+  margin: 8px 0;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-sidebar ul li:hover {
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.chat-sidebar ul li:active {
+  background-color: #005bb5;
+}
