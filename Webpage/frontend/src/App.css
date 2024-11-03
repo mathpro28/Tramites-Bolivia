@@ -1,12 +1,12 @@
 .app-container {
   font-family: Arial, sans-serif;
-  background-color: #121212;
+  background-color: #01071d;
   color: #fff;
   text-align: center;
 }
 
 .app-body {
   display: flex;
-  max-width: 1200px;
+  max-width: none;
   margin: auto;
 }
