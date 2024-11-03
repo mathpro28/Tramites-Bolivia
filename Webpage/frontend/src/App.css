@@ -7,6 +7,6 @@
 
 .app-body {
   display: flex;
-  max-width: 1200px;
+  max-width: none;
   margin: auto;
 }

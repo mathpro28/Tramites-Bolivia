@@ -5,7 +5,7 @@ import './ChatWindow.css';
 const ChatWindow = () => {
   // Example state to hold chat messages
   const [messages, setMessages] = useState([
-    { text: 'Hola! Con qué tramite te puedo ayudar hoy?', sender: 'bot' },
+    { text: '¡Hola! ¿Con qué tramite te puedo ayudar hoy?', sender: 'bot' },
     { text: 'I want to learn more about your services.', sender: 'user' }
   ]);
 
