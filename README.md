@@ -1,6 +1,6 @@
 
 # TramiBot AI Bolivia
-![bot-icon](https://github.com/user-attachments/assets/7e86895a-7eeb-45c6-8e10-b6c72e1cf81a =150x150)
+![bot-icon](https://github.com/user-attachments/assets/7e86895a-7eeb-45c6-8e10-b6c72e1cf81a)
 
 
 Hacer tramites en Bolivia no tiene que ser tan feo. Es por eso que llega este ChatBot AI que te orientara y resolvera tus dudas acerca cualquier tramite en Bolivia.
