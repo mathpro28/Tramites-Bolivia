@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './MessageInput.css';
+import Warning from './Warning'; // Import the Warning component
 
 const MessageInput = ({ onSend }) => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [isSending, setIsSending] = useState(false);
-  const MAX_MESSAGE_LENGTH = 500;
+  const MAX_MESSAGE_LENGTH = 100;
 
   const escapeHtml = (text) => {
     const div = document.createElement('div');
@@ -34,7 +35,7 @@ const MessageInput = ({ onSend }) => {
 
   return (
     <div className="message-input-container">
-      <div className="error-message">{error}</div>
+      {error && <Warning message={error} />} {/* Show warning if there's an error */}
       <input
         type="text"
         className="message-input"

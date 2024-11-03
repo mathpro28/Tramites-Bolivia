@@ -83,3 +83,25 @@ body {
 .send-button:hover {
     background-color: #3a6bc0; /* Slightly darker on hover */
 }
+
+/* MessageWindow.css */
+.message-window {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Set a fixed height for the chat area */
+    border: 1px solid #ccc; /* Optional: Add a border for visual separation */
+    border-radius: 5px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure overflow is hidden */
+  }
+  
+  .message-container {
+    flex: 1; /* Allow the message container to grow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add some padding */
+  }
+  
+  /* Optional: Style for the message bubbles */
+  .message-bubble {
+    margin: 5px 0; /* Add spacing between messages */
+  }
+  
