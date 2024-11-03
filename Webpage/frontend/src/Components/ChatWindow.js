@@ -1,4 +1,8 @@
+// ChatWindow.js
 import React, { useState } from 'react';
+import MessageBubble from './MessageBubble';
+import MessageInput from './MessageInput';
+import axios from 'axios'; // Importa axios
 import MessageWindow from './MessageWindow';
 import './ChatWindow.css';
 
@@ -9,10 +13,24 @@ const ChatWindow = () => {
     { text: 'I want to learn more about your services.', sender: 'user' }
   ]);
 
-  // Function to add a new message
-  const sendMessage = (text) => {
-    setMessages([...messages, { text, sender: 'user' }]);
-  };
+  const sendMessage = async (text) => {
+    const userMessage = { text, sender: "user" };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+
+    try {
+      // Realiza la solicitud a la API
+      const response = await axios.post('http://127.0.0.1:5000/ask', {
+        prompt: text
+      });
+
+      // Agrega el mensaje del bot a la lista de mensajes
+      const botMessage = { text: response.data.response, sender: "bot" };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    } catch (error) {
+      console.error('Error al enviar la consulta:', error);
+      const errorMessage = { text: "Error al obtener respuesta del servidor.", sender: 'bot' };
+      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+    }
 
   return (
     <div className="chat-window">
