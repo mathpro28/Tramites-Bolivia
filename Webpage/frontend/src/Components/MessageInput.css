@@ -24,33 +24,20 @@
     max-width: 75%;
   }
   
-  .message-bubble.bot {
-    align-self: flex-start;
-    background-color: #f1f3f4;
-    border-top-left-radius: 0;
-  }
-  
-  .message-bubble.user {
-    align-self: flex-end;
-    background-color: #007aff;
-    color: #fff;
-    border-top-right-radius: 0;
-  }
-  
-  .message-bubble .avatar {
+  /* .message-bubble .avatar {
     width: 35px;
     height: 35px;
     margin-right: 10px;
     border-radius: 50%;
-  }
+  } */
   
-  .message-input {
+  /* .message-input {
     display: flex;
     align-items: center;
     padding: 10px;
     background-color: #f1f3f4;
     border-top: 1px solid #ddd;
-  }
+  } */
   
   .message-input input {
     flex: 1;

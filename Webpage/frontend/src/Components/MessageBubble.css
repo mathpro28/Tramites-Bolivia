@@ -9,13 +9,13 @@
 
 .message-bubble.bot {
   justify-content: flex-start;
-  background-color: #e0e0e0;
+  background-color: #684bf9;
   align-self: flex-start;
 }
 
 .message-bubble.user {
   justify-content: flex-end;
-  background-color: #0084ff;
+  background-color: #7b00ff;
   color: white;
   align-self: flex-end;
 }

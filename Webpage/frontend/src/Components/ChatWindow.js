@@ -5,7 +5,7 @@ import './ChatWindow.css';
 const ChatWindow = () => {
   // Example state to hold chat messages
   const [messages, setMessages] = useState([
-    { text: 'Hello! How can I help you today?', sender: 'bot' },
+    { text: 'Hola! Con qué tramite te puedo ayudar hoy?', sender: 'bot' },
     { text: 'I want to learn more about your services.', sender: 'user' }
   ]);
 
@@ -20,7 +20,7 @@ const ChatWindow = () => {
       <div className="message-input">
         <input
           type="text"
-          placeholder="Type a message..."
+          placeholder="Escribe tu consulta aquí..."
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
               sendMessage(e.target.value);
