@@ -1,0 +1,12 @@
+/* Warning.css */
+.warning-container {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    display: inline-block; /* To prevent it from taking full width */
+  }
+  
