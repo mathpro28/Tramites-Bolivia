@@ -58,20 +58,11 @@ To set up the environment using `requirements.txt`, follow these steps:
 
 #### How to run the backend?
 
-You need to follow these commands:
-- **Make Migrations**: Create new migrations based on the changes detected in your models.
-    ```bash
-    python manage.py makemigrations
-    ```
-
-- **Apply Migrations**: Apply the migrations to your database.
-    ```bash
-    python manage.py migrate
-    ```
+You need to follow this command:
 
 - **Start the Server**: Start the development server.
     ```bash
-    python manage.py runserver
+    python main.py
     ```
 
 #### How to run the frontend?
