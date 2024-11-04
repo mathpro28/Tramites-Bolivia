@@ -36,6 +36,18 @@ To set up the environment using `requirements.txt`, follow these steps:
     pip install -r requirements.txt
 
 
+## Technologies used for the web app ⚒️
+1. **BackEnd**
+   - Django
+   - Djando REST Framework 
+3. **FrontEnd**
+   - React
+   - React DOM
+   - Babel
+   - ESLint
+   - React Router
+
+
 ## Documentation 📚
 
 For further details or contribution, go check out the official [Documentation](https://docs.google.com/document/d/1ZAb6nKoZCCsC50XRx69zipMYuW7onvId/edit?usp=sharing&ouid=106969887062134886196&rtpof=true&sd=true).
