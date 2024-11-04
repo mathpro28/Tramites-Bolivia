@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import MessageWindow from './MessageWindow';
-import axios from 'axios'; // Importa axios para la conexión al backend
+import axios from 'axios'; 
 import './ChatWindow.css';
 
 const ChatWindow = () => {
-  // Estado para mantener los mensajes
+  // state for messages
   const [messages, setMessages] = useState([
     { text: '¡Hola! ¿Con qué tramite te puedo ayudar hoy?', sender: 'bot' }
   ]);
 
-  // Función para agregar un nuevo mensaje y enviar al backend
+  // function to send messages to backend
   const sendMessage = async (text) => {
     const userMessage = { text, sender: 'user' };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
     try {
-      // Realiza la solicitud a la API
+      // request to API
       const response = await axios.post('http://127.0.0.1:5002/ask', {
         prompt: text
       });
 
-      // Agrega la respuesta del bot al estado de los mensajes
+      // add bot response
       const botMessage = { text: response.data.response, sender: 'bot' };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error) {
@@ -41,8 +41,8 @@ const ChatWindow = () => {
             if (e.key === 'Enter') {
               const text = e.target.value.trim();
               if (text) {
-                sendMessage(text); // Llama a la función para enviar el mensaje
-                e.target.value = ''; // Limpia el campo de entrada
+                sendMessage(text); 
+                e.target.value = ''; // clears input box
               }
             }
           }}
@@ -52,8 +52,8 @@ const ChatWindow = () => {
             const inputElement = document.querySelector('.message-input input');
             const text = inputElement.value.trim();
             if (text) {
-              sendMessage(text); // Llama a la función para enviar el mensaje
-              inputElement.value = ''; // Limpia el campo de entrada
+              sendMessage(text); 
+              inputElement.value = ''; // clears input box
             }
           }}
         >
