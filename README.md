@@ -8,6 +8,11 @@ Hacer tramites en Bolivia no tiene que ser tan feo. Es por eso que llega este Ch
 
 
 
+## Objective 🏆
+The objective of this project is to give the people the ability to know how legal procedures work in Bolivia. This tool will help you to optimize the way you were used to get information and requirements for a specific procedure in Bolivia. This chatbot contains information from the 3 cities of Bolivia(Cochabamba, La Paz, Santa Cruz), more to come later.
+
+
+
 ## Documentation 📚
 
 For further details or contribution, go check out the official [Documentation](https://docs.google.com/document/d/1ZAb6nKoZCCsC50XRx69zipMYuW7onvId/edit?usp=sharing&ouid=106969887062134886196&rtpof=true&sd=true).
