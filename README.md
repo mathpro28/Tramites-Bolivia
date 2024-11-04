@@ -4,7 +4,7 @@
 
 
 
-Hacer tramites en Bolivia no tiene que ser tan feo. Es por eso que llega este ChatBot AI que te orientara y resolvera tus dudas acerca cualquier tramite en Bolivia.
+Doing legal procedures in Bolivia will no longer be boring and tiring anymore! Thanks to this Fine-Tuned model you will have all of your questions responded. 
 
 
 
