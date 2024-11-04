@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ontology#"
+     xml:base="http://example.org/ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <!-- Define Ontology -->
+    <owl:Ontology rdf:about="http://example.org/ontology">
+        <rdfs:comment>Ontology representing organizations and procedures</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://example.org/ontology#Organization"/>
+    <owl:Class rdf:about="http://example.org/ontology#Procedure"/>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://example.org/ontology#hasProcedure">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://example.org/ontology#Procedure"/>
+    </owl:ObjectProperty>
+
+    <!-- Data Properties for Organization -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#denominacion">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#sigla">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#objetivoEntidad">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#urlSitioWeb">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#descripcionCategoria">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Data Properties for Procedure URL -->
+    <owl:DatatypeProperty rdf:about="http://example.org/ontology#url">
+        <rdfs:domain rdf:resource="http://example.org/ontology#Procedure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+
+    <!-- Sample Organization Instances -->
+    <Organization rdf:about="http://example.org/ontology#Organization1937">
+        <denominacion>Ministerio de Educación de Bolivia</denominacion>
+        <sigla>MINEDU</sigla>
+        <objetivoEntidad>diseñar implementar ejecutar politicas estrategias educativas inclusivas equitativas intraculturales interculturales plurilingües cientificas tecnica tecnologica calidad participacion social ambito territorial comunitario productivo descolonizador trave sistema educativo plurinacional</objetivoEntidad>
+        <urlSitioWeb>http://www.minedu.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure101"/>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure102"/>
+    </Organization>
+
+    <!-- Sample Procedure Instances -->
+    <Procedure rdf:about="http://example.org/ontology#Procedure101">
+        <descripcionCategoria>Solicitud de Exención de Impuestos Educativos</descripcionCategoria>
+        <required_documents>Certificado de Registro Educativo, Identificación Oficial</required_documents>
+        <processing_time>20 días</processing_time>
+        <fees>Sin cargo</fees>
+        <url>http://example.org/procedures/exencion-impuestos-educativos</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure102">
+        <descripcionCategoria>Certificación de Institución Educativa</descripcionCategoria>
+        <required_documents>Formulario de Solicitud, Plan de Estudios</required_documents>
+        <processing_time>30 días</processing_time>
+        <fees>200 USD</fees>
+        <url>http://example.org/procedures/certificacion-institucion-educativa</url>
+    </Procedure>
+
+    <!-- Additional Procedure Instances -->
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure105">
+        <descripcionCategoria>Registro de Comercio</descripcionCategoria>
+        <required_documents>Formulario de Registro, Documento de Identidad</required_documents>
+        <processing_time>15 días</processing_time>
+        <fees>100 USD</fees>
+        <url>http://example.org/procedures/registro-comercio</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure106">
+        <descripcionCategoria>Licencia de Funcionamiento Municipal</descripcionCategoria>
+        <required_documents>Formulario de Solicitud, Certificado de Zonificación</required_documents>
+        <processing_time>10 días</processing_time>
+        <fees>50 USD</fees>
+        <url>http://example.org/procedures/licencia-funcionamiento-municipal</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure107">
+        <descripcionCategoria>Autorización para Exportación</descripcionCategoria>
+        <required_documents>Formulario de Exportación, Contrato de Compra</required_documents>
+        <processing_time>20 días</processing_time>
+        <fees>200 USD</fees>
+        <url>http://example.org/procedures/autorizacion-exportacion</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure108">
+        <descripcionCategoria>Solicitud de Certificado de Nacimiento</descripcionCategoria>
+        <required_documents>Documento de Identidad de los Padres</required_documents>
+        <processing_time>5 días</processing_time>
+        <fees>Sin cargo</fees>
+        <url>http://example.org/procedures/certificado-nacimiento</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure109">
+        <descripcionCategoria>Registro de Marca</descripcionCategoria>
+        <required_documents>Formulario de Registro de Marca, Prueba de Uso</required_documents>
+        <processing_time>30 días</processing_time>
+        <fees>100 USD</fees>
+        <url>http://example.org/procedures/registro-marca</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure110">
+        <descripcionCategoria>Solicitud de Visa de Residencia</descripcionCategoria>
+        <required_documents>Formulario de Solicitud, Pasaporte</required_documents>
+        <processing_time>45 días</processing_time>
+        <fees>300 USD</fees>
+        <url>http://example.org/procedures/visa-residencia</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure111">
+        <descripcionCategoria>Registro de Vehículo</descripcionCategoria>
+        <required_documents>Certificado de Importación, Documento de Identidad</required_documents>
+        <processing_time>10 días</processing_time>
+        <fees>150 USD</fees>
+        <url>http://example.org/procedures/registro-vehiculo</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure112">
+        <descripcionCategoria>Solicitud de Licencia de Conducir</descripcionCategoria>
+        <required_documents>Documento de Identidad, Examen Médico</required_documents>
+        <processing_time>7 días</processing_time>
+        <fees>25 USD</fees>
+        <url>http://example.org/procedures/licencia-conducir</url>
+    </Procedure>
+
+    <Procedure rdf:about="http://example.org/ontology#Procedure113">
+        <descripcionCategoria>Registro de Propiedad Inmobiliaria</descripcionCategoria>
+        <required_documents>Escritura de Compra-Venta, Certificado Catastral</required_documents>
+        <processing_time>30 días</processing_time>
+        <fees>200 USD</fees>
+        <url>http://example.org/procedures/registro-propiedad-inmobiliaria</url>
+    </Procedure>
+
+    <!-- Organization Instances -->
+    <Organization rdf:about="http://example.org/ontology#Organization1937">
+        <denominacion>Ministerio de Educación de Bolivia</denominacion>
+        <sigla>MINEDU</sigla>
+        <objetivoEntidad>Promover la educación inclusiva y de calidad en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.minedu.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure101"/>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure102"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1938">
+        <denominacion>Servicio de Impuestos Nacionales</denominacion>
+        <sigla>SIN</sigla>
+        <objetivoEntidad>Administrar el sistema tributario en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.impuestos.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure105"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1939">
+        <denominacion>Gobierno Autónomo Municipal de La Paz</denominacion>
+        <sigla>GAMLP</sigla>
+        <objetivoEntidad>Gestión administrativa y servicios municipales en la ciudad de La Paz.</objetivoEntidad>
+        <urlSitioWeb>http://www.lapaz.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure106"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1940">
+        <denominacion>Agencia Nacional de Hidrocarburos</denominacion>
+        <sigla>ANH</sigla>
+        <objetivoEntidad>Regulación y supervisión de la industria de hidrocarburos en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.anh.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure107"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1941">
+        <denominacion>Servicio de Registro Cívico</denominacion>
+        <sigla>SERECI</sigla>
+        <objetivoEntidad>Registro de eventos vitales como nacimientos, matrimonios y defunciones.</objetivoEntidad>
+        <urlSitioWeb>http://www.sereci.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure108"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1942">
+        <denominacion>Servicio Nacional de Propiedad Intelectual</denominacion>
+        <sigla>SENAPI</sigla>
+        <objetivoEntidad>Protección y registro de la propiedad intelectual en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.senapi.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure109"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1943">
+        <denominacion>Dirección General de Migración</denominacion>
+        <sigla>MIGRACION</sigla>
+        <objetivoEntidad>Control migratorio y emisión de visas y permisos en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.migracion.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure110"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1944">
+        <denominacion>Servicio General de Identificación Personal</denominacion>
+        <sigla>SEGIP</sigla>
+        <objetivoEntidad>Registro y emisión de cédulas de identidad y otros documentos de identificación.</objetivoEntidad>
+        <urlSitioWeb>http://www.segip.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure112"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1945">
+        <denominacion>Instituto Nacional de Reforma Agraria</denominacion>
+        <sigla>INRA</sigla>
+        <objetivoEntidad>Administración y regulación de la propiedad de tierras en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.inra.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure113"/>
+    </Organization>
+
+        <Organization rdf:about="http://example.org/ontology#Organization1946">
+        <denominacion>Ministerio de Salud y Deportes</denominacion>
+        <sigla>MSD</sigla>
+        <objetivoEntidad>Promover la salud y bienestar de la población boliviana.</objetivoEntidad>
+        <urlSitioWeb>http://www.minsalud.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure114"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1947">
+        <denominacion>Ministerio de Obras Públicas, Servicios y Vivienda</denominacion>
+        <sigla>MOPSV</sigla>
+        <objetivoEntidad>Desarrollo de infraestructura pública y servicios básicos.</objetivoEntidad>
+        <urlSitioWeb>http://www.mopsv.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure115"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1948">
+        <denominacion>Ministerio de Justicia y Transparencia Institucional</denominacion>
+        <sigla>MJTI</sigla>
+        <objetivoEntidad>Fomentar la justicia y la transparencia en la administración pública.</objetivoEntidad>
+        <urlSitioWeb>http://www.justicia.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure116"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1949">
+        <denominacion>Ministerio de Trabajo, Empleo y Previsión Social</denominacion>
+        <sigla>MTEPS</sigla>
+        <objetivoEntidad>Regular las relaciones laborales y promover el empleo en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.mintrabajo.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure117"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1950">
+        <denominacion>Ministerio de Medio Ambiente y Agua</denominacion>
+        <sigla>MMAyA</sigla>
+        <objetivoEntidad>Proteger el medio ambiente y gestionar los recursos hídricos en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.ambienteyagua.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure118"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1951">
+        <denominacion>Agencia Nacional de Seguridad Nuclear</denominacion>
+        <sigla>ANSN</sigla>
+        <objetivoEntidad>Regular y controlar el uso de materiales nucleares en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.ansn.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure119"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1952">
+        <denominacion>Autoridad de Fiscalización y Control Social de Empresas</denominacion>
+        <sigla>AFCOE</sigla>
+        <objetivoEntidad>Fiscalizar y regular el funcionamiento de las empresas en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.afcoe.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure120"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1953">
+        <denominacion>Ministerio de Planificación del Desarrollo</denominacion>
+        <sigla>MPD</sigla>
+        <objetivoEntidad>Planificar y coordinar el desarrollo económico y social en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.planificacion.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure121"/>
+    </Organization>
+
+    <Organization rdf:about="http://example.org/ontology#Organization1954">
+        <denominacion>Ministerio de Culturas, Descolonización y Despatriarcalización</denominacion>
+        <sigla>MCDDD</sigla>
+        <objetivoEntidad>Promover la diversidad cultural y la descolonización en Bolivia.</objetivoEntidad>
+        <urlSitioWeb>http://www.culturas.gob.bo</urlSitioWeb>
+        <hasProcedure rdf:resource="http://example.org/ontology#Procedure122"/>
+    </Organization>
+
+
+</rdf:RDF>
