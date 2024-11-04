@@ -107,6 +107,8 @@ Hugging Face is a company specializing in natural language processing technologi
 
 For further details or contribution, go check out the official [Documentation](https://docs.google.com/document/d/1ZAb6nKoZCCsC50XRx69zipMYuW7onvId/edit?usp=sharing&ouid=106969887062134886196&rtpof=true&sd=true).
 
+Check out llama2 official [documentation](https://huggingface.co/blog/llama2) too.
+
 
 
 ## Authors 3️⃣
