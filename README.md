@@ -17,7 +17,9 @@ The objective of this project is to give the people the ability to know how lega
 ![image](https://github.com/user-attachments/assets/d9d0a6ac-29c0-456b-9e45-a22c2a45c7e3)
 
 
-
+## What is to Fine Tune a model?
+![9764beac-a786-4305-9a47-ec050b0ebef6_1060x308](https://github.com/user-attachments/assets/b19c8dbe-6c4e-4105-bdae-b35905e81493)
+Fine-tuning a model is the process of taking a pre-trained machine learning model and training it further on a specific dataset to adapt it for a specialized task or domain.
 
 
 ## Installation ⚙️
