@@ -14,7 +14,7 @@ For further details or contribution, go check out the official [Documentation](h
 
 
 
-## Authors 🎓
+## Authors 3️⃣
 
 - [@mathpro20](https://github.com/mathpro28)
 - [@NicoBarbery](https://github.com/NicoBarbery)
