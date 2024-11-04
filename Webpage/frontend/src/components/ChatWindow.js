@@ -1,17 +1,33 @@
 import React, { useState } from 'react';
 import MessageWindow from './MessageWindow';
+import axios from 'axios'; // Importa axios para la conexión al backend
 import './ChatWindow.css';
 
 const ChatWindow = () => {
-  // Example state to hold chat messages
+  // Estado para mantener los mensajes
   const [messages, setMessages] = useState([
-    { text: '¡Hola! ¿Con qué tramite te puedo ayudar hoy?', sender: 'bot' },
-    { text: 'I want to learn more about your services.', sender: 'user' }
+    { text: '¡Hola! ¿Con qué tramite te puedo ayudar hoy?', sender: 'bot' }
   ]);
 
-  // Function to add a new message
-  const sendMessage = (text) => {
-    setMessages([...messages, { text, sender: 'user' }]);
+  // Función para agregar un nuevo mensaje y enviar al backend
+  const sendMessage = async (text) => {
+    const userMessage = { text, sender: 'user' };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+
+    try {
+      // Realiza la solicitud a la API
+      const response = await axios.post('http://127.0.0.1:5002/ask', {
+        prompt: text
+      });
+
+      // Agrega la respuesta del bot al estado de los mensajes
+      const botMessage = { text: response.data.response, sender: 'bot' };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
+    } catch (error) {
+      console.error('Error al enviar la consulta:', error);
+      const errorMessage = { text: 'Error al obtener respuesta del servidor.', sender: 'bot' };
+      setMessages((prevMessages) => [...prevMessages, errorMessage]);
+    }
   };
 
   return (
@@ -23,13 +39,25 @@ const ChatWindow = () => {
           placeholder="Escribe tu consulta aquí..."
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
-              sendMessage(e.target.value);
-              e.target.value = ''; // Clear input field
+              const text = e.target.value.trim();
+              if (text) {
+                sendMessage(text); // Llama a la función para enviar el mensaje
+                e.target.value = ''; // Limpia el campo de entrada
+              }
             }
           }}
         />
-        <button onClick={() => sendMessage(document.querySelector('.message-input input').value)}>
-          Send
+        <button
+          onClick={() => {
+            const inputElement = document.querySelector('.message-input input');
+            const text = inputElement.value.trim();
+            if (text) {
+              sendMessage(text); // Llama a la función para enviar el mensaje
+              inputElement.value = ''; // Limpia el campo de entrada
+            }
+          }}
+        >
+          Enviar
         </button>
       </div>
     </div>
