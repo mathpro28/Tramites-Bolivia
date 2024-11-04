@@ -14,7 +14,8 @@ The objective of this project is to give the people the ability to know how lega
 
 
 ## Behind the Scenes 👀
-![image](https://github.com/user-attachments/assets/aea2523f-1fdd-48ec-ba55-ae5129ce255e)
+![image](https://github.com/user-attachments/assets/d9d0a6ac-29c0-456b-9e45-a22c2a45c7e3)
+
 
 
 
