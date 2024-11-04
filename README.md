@@ -12,6 +12,13 @@ Doing legal procedures in Bolivia will no longer be boring and tiring anymore! T
 The objective of this project is to give the people the ability to know how legal procedures work in Bolivia. This tool will help you to optimize the way you were used to get information and requirements for a specific procedure in Bolivia. This chatbot contains information from the 3 cities of Bolivia(Cochabamba, La Paz, Santa Cruz), more to come later.
 
 
+
+## Behind the Scenes 👀
+![image](https://github.com/user-attachments/assets/aea2523f-1fdd-48ec-ba55-ae5129ce255e)
+
+
+
+
 ## Installation ⚙️
 In order to try out the sentiment analyzer first you need to install the requirements.
 Make sure you have at least Python 3.11 installed. You can download it from [python.org](https://www.python.org/downloads/).
