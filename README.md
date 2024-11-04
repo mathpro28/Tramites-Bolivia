@@ -96,8 +96,8 @@ Hugging Face is a company specializing in natural language processing technologi
 - Dataset creation
 - Fine Tuning process
 - Question API
--    Knowledge Graph
--    Fine Tuned model
+   - Knowledge Graph
+   - Fine Tuned model
 
 
 
