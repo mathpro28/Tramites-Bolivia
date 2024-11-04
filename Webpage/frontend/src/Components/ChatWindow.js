@@ -1,11 +1,10 @@
-// ChatWindow.js
 import React, { useState } from 'react';
 import MessageBubble from './MessageBubble';
 import MessageInput from './MessageInput';
 import axios from 'axios'; // Importa axios
 import MessageWindow from './MessageWindow';
 import './ChatWindow.css';
-
+//¿Cuál es la URL del sitio web de la organización Ministerio de Educación de Bolivia?
 const ChatWindow = () => {
   // Example state to hold chat messages
   const [messages, setMessages] = useState([
