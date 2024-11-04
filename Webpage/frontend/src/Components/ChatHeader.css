@@ -1,0 +1,36 @@
+.chat-header {
+  padding: 40px 20px;
+  background-color: #06102b;  /* Optional: adds a subtle background */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;  /* Reduced gap between elements */
+  max-width: 800px;  /* Match this with your chat window width */
+  margin: 0 auto;    /* Center the header content */
+}
+
+.header-image {
+  height: 60px;      /* Adjust size as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: center;
+  flex-grow: 1;      /* Allows text to take available space */
+}
+
+/* Optional: if you want to adjust the title size */
+.header-text h1 {
+  margin: 0;
+  font-size: 36px;   /* Adjust size as needed */
+  color: #0cdacc;
+
+}
+
+.header-text p {
+  margin: 5px 0 0;   /* Reduced margin top */
+}
