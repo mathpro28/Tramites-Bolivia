@@ -52,7 +52,7 @@ bnb_config = BitsAndBytesConfig(
 # Carga el modelo y el tokenizador
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    quantization_config=bnb_config,
+    # quantization_config=bnb_config,
     device_map={"": 0}
 )
 
