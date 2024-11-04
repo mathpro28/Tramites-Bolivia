@@ -38,13 +38,10 @@ To set up the environment using `requirements.txt`, follow these steps:
 
 ## Technologies used for the web app ⚒️
 1. **BackEnd**
-   - Django
-   - Djando REST Framework 
+   - FastAPI
 3. **FrontEnd**
    - React
    - React DOM
-   - Babel
-   - ESLint
    - React Router
 
 
